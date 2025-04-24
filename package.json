@@ -1,0 +1,29 @@
+{
+  "name": "homepage",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "build": "sass src/resources/scss/create.scss src/public/css/create.css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "sass --watch src/resources/scss/create.scss src/public/css/create.css",
+    "beautiful": "prettier --tab-width 4 --single-quote --trailing-comma all --write 'src/**/*.{js,json,scss}'"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.2",
+    "handlebars": "^4.7.8",
+    "method-override": "^3.0.0",
+    "moment": "^2.30.1",
+    "mongoose": "^8.13.2",
+    "mongoose-delete": "^1.0.2",
+    "mongoose-slug-updater": "^3.3.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.5.3",
+    "sass": "^1.87.0"
+  }
+}

@@ -1,0 +1,42 @@
+<div class="card shadow-sm">
+  <div class="card-body">
+    <h3 class="card-title mb-4">📝 Danh sách công việc</h3>
+
+    <!-- Form thêm công việc -->
+    <form action="/add" method="POST" class="d-flex gap-2 mb-4">
+      <input
+        type="text"
+        name="content"
+        class="form-control"
+        placeholder="Nhập việc cần làm..."
+        required
+      >
+      <button class="btn btn-primary">Thêm</button>
+    </form>
+
+    <!-- Danh sách công việc -->
+    {{#if todos.length}}
+      <ul class="list-group">
+        {{#each todos}}
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+              {{#if completed}}
+                <s class="text-muted">{{content}}</s>
+              {{else}}
+                {{content}}
+              {{/if}}
+            </div>
+            <div>
+              {{#unless completed}}
+                <a href="/complete/{{_id}}" class="btn btn-sm btn-success me-2">✅</a>
+              {{/unless}}
+              <a href="/delete/{{_id}}" class="btn btn-sm btn-danger">❌</a>
+            </div>
+          </li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <p class="text-muted fst-italic">Chưa có công việc nào.</p>
+    {{/if}}
+  </div>
+</div>
