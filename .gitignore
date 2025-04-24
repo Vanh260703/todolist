@@ -1,0 +1,8 @@
+# Bỏ file cấu hình nhạy cảm
+.env
+
+# Bỏ thư mục node_modules (rất nặng, không cần push lên GitHub)
+node_modules/
+
+# Bỏ log tạm
+npm-debug.log
